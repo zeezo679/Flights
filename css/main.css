@@ -1,0 +1,512 @@
+/* start settings */
+
+body{
+    margin: 0;
+}
+
+.settings-container{
+    background: url('/images/sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.settings-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.settings-nav ul{
+    padding: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+.settings-nav ul li{
+    display: inline;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.settings-nav ul li:nth-child(2){
+    margin-left: 570px;
+}
+
+.settings-nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    padding-bottom:3px ;
+}
+
+
+.settings-nav ul li a:hover{
+    color: white;
+}
+
+.settings-container .first{
+    width: 109%;
+    margin-left: -100px;
+    color: white;
+    opacity: 0.3;
+    margin-top: -11px;
+}
+
+.settings-body{
+    display: flex;
+    gap: 150px;
+}
+
+.settings-body .form h4{
+    font-size: 30px;
+    margin-bottom: -10px;
+    color: white;
+}
+
+.settings-body .form p{
+    margin-bottom: 40px;
+    color: white;
+}
+
+.settings-body .form .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings-body .form .inputs #name{
+    margin-bottom: 40px;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 12px;
+    outline: none;
+    font-size: 18px;
+}
+
+.settings-body .form .inputs #mail{
+    margin-bottom: 40px;
+    border-radius: 4px;
+    border: 1px solid white;
+    padding: 12px;
+    outline: none;
+    font-size: 18px;
+}
+
+
+
+
+
+.settings-body .profile{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+}
+
+.pfp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+
+.settings-container .last{
+    width: 109%;
+    margin-left: -100px;
+    color: white;
+    opacity: 0.3;
+    margin-top: 30px;
+}
+
+.settings-container .delete-account h3{
+    font-size: 30px;
+}
+
+.settings-container .delete-account p{
+    font-size: 16px;
+    margin-top: -20px;
+    color: white;
+}
+
+.settings-container .delete-account .red{
+    padding: 2px 15px;
+    width: 192px;
+    height: 38px;
+    background-color: #ff4a4a;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.settings-container .delete-account .red:hover{
+    color: var(--black-color);
+}
+
+.red{
+    background-color: #ff4a4a !important; 
+}
+
+.red:hover{
+    background:white !important;
+    color: var(--black-color);
+    }
+
+.settings-container .delete-account .delete-button:hover{
+background: transparent;
+color: var(--black-color);
+}
+
+
+
+.settings-container .appearance .themes{
+    display: flex;
+    gap: 30px;
+}
+
+.settings-container .appearance .themes .theme1{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 250px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+.settings-container .appearance .themes .theme2{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 250px;
+    cursor: pointer;
+}
+
+
+.settings-container .appearance .themes .theme2 img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.settings-container .appearance .themes .theme1 img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+.changeFont{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.changeFont .check{
+    display: flex;
+    gap: 10px;
+}
+
+.changeFont .check button{
+    margin-top: 20px;
+    border-radius: 4px;
+    border: none;
+    padding: 1px;
+    outline: none;
+    cursor: pointer;
+}
+
+.changeFont .check button span{
+    display: flex;
+    justify-content: center;
+}
+
+.changeFont input{
+    margin-top: 20px;
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+/* end settings */
+
+/* start login  */
+.main-login{
+    height: 100vh;
+}
+
+.wrapper {
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 540px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease;
+} 
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper.form-box {
+    width: 100%;
+    padding: 40px;
+} 
+
+.wrapper .form-box.login {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #162938;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;  /*///////*/
+}
+
+.input-box input:focus~label, /*///////*/
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.login .main-button{
+    width: 100%;
+}
+
+.remember-forgot {
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+    margin-left: 60px;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+
+
+.login-register {
+    font-size: 1em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* end login */
+
+
+/* start services */
+
+.services{
+    height: auto;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 24px;
+}
+
+.services .box-container .box {
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+
+
+.services .box-container .box h3 {
+    font-size: 40px;
+    color: #333;
+}
+
+.services .box-container .box p {
+    font-size: 24px;
+    color: #666;
+    padding: 16px 0;
+}
+
+.services .box-container .box:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* end services */
+
+/* start gallery */
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 24px;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+    border: 16px solid #fff;
+    border-radius: 8px;
+    height: 400px;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*///////*/
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 32px;
+    transition-duration: 0.3s;
+}
+
+.gallery .box-container .box:hover .content {
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end gallery */
