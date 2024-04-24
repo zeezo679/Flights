@@ -13,7 +13,7 @@
     <div class="main-container">
 
     <!-- start login -->
-    <div class="main-login">
+    <div class="main-login" id="log">
         <div class="wrapper">
             <span class="icon-close"><ion-icon name="close"></ion-icon></span>
     
@@ -285,12 +285,24 @@
                 <div class="delete-account">
                     <h3 style="color: white;">Delete Your Account</h3>
                     <p>By clicking delete, all your data will be removed!</p>
-                    <button class="red"><span class="material-symbols-outlined">
+                    <button class="red" id="delete-account"><span class="material-symbols-outlined">
                         delete_forever
                         </span>Delete My Account</button>
+                    <div class="pop-up" id="pop-up">
+                        <div class="text">
+                            <h5>Are You Sure?</h5>
+                            <p style="color: #333;">You Are About To Delete All Your Data</p>
+                        </div>
+                        <div class="buttons">
+                            <button class="yes" id="yes">Yes</button>
+                            <button class="no" id="no">No</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+            <div class="scroll-top" id="scroll"><span class="material-symbols-outlined">
+                flight
+                </span></div>
         </div>
         <!-- settings end -->
     </div>

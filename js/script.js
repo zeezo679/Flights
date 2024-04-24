@@ -3,6 +3,8 @@ let theme1 = document.getElementById("theme1");
 let theme2 = document.getElementById("theme2");
 let link = document.getElementById("cssTheme");
 
+w
+
 theme2.addEventListener('click', function(){
     link.href = "css/theme1.css"
     theme2.classList.add('active');
@@ -78,8 +80,45 @@ reset.onclick = function(){
         p.style.fontSize = '16px';
    })
    link.href = "css/theme2.css"
-
+   window.scrollTo(0,0)
 }
+
+let scroll = document.getElementById('scroll');
+
+scroll.onclick = function(){
+    window.scrollTo(0,0);
+}
+
+window.addEventListener('scroll', (e) => {
+    let y = this.scrollY;
+    // console.log(y);
+    if(y>2630){
+        scroll.style.opacity= '1'
+    }
+    else{
+        scroll.style.opacity = '0'
+    }
+})
+
+
+let deletAcct = document.getElementById("delete-account");
+let pop = document.getElementById("pop-up");
+let no = document.getElementById("no");
+let yes = document.getElementById("yes");
+
+deletAcct.onclick = function(){
+    pop.style.transform = 'translate(-50%, -50%) scale(1)';
+}
+
+no.onclick = function() {
+    pop.style.transform = 'translate(-500%, -50%) scale(0)';
+}
+
+yes.addEventListener('click', function(e){
+    localStorage.clear()
+    pop.style.transform = 'translate(-500%, -50%) scale(0)';
+    window.location.reload();
+})
 
 // end settings
 

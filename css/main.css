@@ -4,6 +4,11 @@ body{
     margin: 0;
 }
 
+html
+{ 
+    scroll-behavior: smooth;
+}
+
 .settings-container{
     background: url('/images/sky.jpg');
     background-size: cover;
@@ -256,6 +261,115 @@ color: var(--black-color);
     border: none;
     padding: 5px;
     outline: none;
+}
+
+.scroll-top{
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    z-index: 999;
+    background-color: #1389e3;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    opacity: 0;
+    color: white;
+    transition:opacity 0.4s ease;
+    transition: 0.2s;
+}
+
+@keyframes jumpAndFall {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-top:hover{
+    background-color: white;
+    color: #162938;
+    animation: jumpAndFall 0.5s infinite; 
+}
+
+.pop-up{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 415px;
+    border-radius: 8px;
+    box-shadow: -1px 5px 19px 3px black;
+    transition: transform 0.3s ease;
+}
+
+.pop-up h5{
+        color: #ff4a4a;
+        font-size: 30px;
+        margin-bottom: 25px;
+}
+
+.pop-up p{
+    margin-bottom: 30px;
+}
+
+.pop-up .buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.pop-up .yes{
+    padding: 2px 15px;
+    width: 100px;
+    height: 38px;
+    background-color: #ff4a4a;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pop-up .no{
+    padding: 2px 15px;
+    width: 100px;
+    height: 38px;
+    background-color: #333;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 200ms;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* end settings */
