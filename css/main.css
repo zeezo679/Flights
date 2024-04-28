@@ -12,7 +12,7 @@ html
     background: url('/images/7280763.jpg');
     background-size: cover;
     position: relative;
-    height: 180vh;
+    height: 140vh;
 }
 
 .weather-container::before{
@@ -79,60 +79,6 @@ html
 
 .table  td, .search-input{
     padding: 12px;
-}
-
-.weather-container span{
-    color: white;
-    position: relative;
-    z-index: 999;
-    font-size: 40px;
-    top: 200px;
-}
-
-.weather-container span > a{
-    color: #ff4a4a;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.weather-container span > a:hover{
-    color: #a92e2e;
-}
-
-.image-links img{
-    width: 380px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-links{
-    display: flex;
-    z-index: 999;
-    position: relative;
-    justify-content: center;
-    gap: 55px;
-    top: 60px;
-    color: var(--black-color);
-    cursor: pointer;
-    font-size: 20px;
-    text-align: center;
-}
-
-a{
-    text-decoration: none;
-}
-
-.image-links .imgb{
-    background-color: #90fffd;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 13px 17px #f5f5f512;
-}
-
-.image-links .imgb a{
-    color: black;
-    font-weight: 500;
 }
 
 .search-input{
@@ -514,3 +460,458 @@ color: var(--black-color);
 }
 
 /* end zeyad code */
+
+/* start hzm */
+/* heading styles starts */
+
+
+.hazem .heading {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 100px 0px;
+    color: cadetblue;
+}
+
+.hazem .heading span {
+    font-size: 3.5rem;
+    background: #ededed;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    margin-right: 1px; /* corrected from margin: right 1px; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+/* heading styles starts */
+
+.hazem section {
+    display: flex;
+    justify-content: center;
+}
+
+.hazem img {
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.hazem figure {
+    margin: 20px;
+    padding: 0px 0px 10px 0px;
+    font-size: 40px;
+    background-color: #ededed;
+    border-radius: 20px;
+}
+
+.hazem span {
+    font-size: 20px;
+}
+
+.hazem figcaption {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+
+.hazem .secondradio {
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.hazem #page5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hazem #page5 .figures{
+    display: flex;
+    justify-content: center;
+}
+
+.hazem input {
+    cursor: pointer;
+}
+
+.hazem input[type="radio"]:checked {
+    accent-color: #fec524;
+}
+
+/* heading styles starts */
+.hazem .container .heading {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 100px 0px;
+    color: white;
+}
+
+.hazem .container .heading span {
+    font-size: 3.5rem;
+    background: #008891;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    margin: right 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.hazem .container .heading span.space {
+    background: none;
+}
+/* heading styles ends */
+
+/* primary radio styles starts */
+.hazem .container .primaryradio {
+    display: flex;
+    position: static;
+    background-color: none;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.hazem .container .radio1,
+.hazem .container .radio2 {
+    margin-right: 5px;
+}
+/* primary radio styles ends */
+
+.hazem .container .container {
+    background-image: url("../image/flyin.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* form styles starts */
+
+.hazem .container .form {
+    display: flex; 
+    align-items: flex-end;
+}
+
+.hazem .container .from,
+.hazem .container .To,
+.hazem .container .Depart,
+.hazem .container .Return,
+.hazem .container .Travellers,
+.hazem .container .class {
+    margin: 10px 10px 0px 10px;
+}
+
+.hazem .container .form-container {
+    position: static;
+    padding: 60px;
+    background-color: #3a4a68c9;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+.hazem .container input {
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+/* علامة اليد عند الزر */
+.hazem .container label {
+    font-size: larger;
+}
+
+.hazem .container .radio,
+.hazem .container label,
+.hazem .container input:checked {
+    cursor: pointer;
+}
+
+/* Change the color of the button*/
+.hazem .container input[type="radio"]:checked {
+    accent-color: #FEC524;
+}
+
+.hazem .container button {
+    padding: 14px;
+    font-size: 20px;
+    border-radius: 12px;
+    background-color: cadetblue;
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+}
+
+.hazem .container button:hover {
+    background-color: #808c91;
+    box-shadow: 0px 0px 6px 1px white;
+}
+/* form styles ends */
+
+
+/* end hzm */
+
+/* start login  */
+.main-login{
+    height: 100vh;
+    display: none;
+}
+
+.wrapper {
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 540px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height 0.2s ease;
+} 
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper.form-box {
+    width: 100%;
+    padding: 40px;
+} 
+
+.wrapper .form-box.login {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+
+
+.form-box h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #162938;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;  /*///////*/
+}
+
+.input-box input:focus~label, /*///////*/
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.login .main-button{
+    width: 100%;
+}
+
+.remember-forgot {
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+    margin-left: 60px;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+
+
+.login-register {
+    font-size: 1em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* end login */
+
+
+/* start services */
+
+.services{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 24px;
+}
+
+.services .box-container .box {
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+
+
+.services .box-container .box h3 {
+    font-size: 40px;
+    color: #333;
+}
+
+.services .box-container .box p {
+    font-size: 24px;
+    color: #666;
+    padding: 16px 0;
+}
+
+.services .box-container .box:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* end services */
+
+/* start gallery */
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery .box-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 24px;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+    border: 16px solid #fff;
+    border-radius: 8px;
+    height: 400px;
+    position: relative;
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /*///////*/
+}
+
+.gallery .box-container .box .content {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    padding: 32px;
+    transition-duration: 0.3s;
+}
+
+.gallery .box-container .box:hover .content {
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end gallery */
