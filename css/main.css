@@ -1,5 +1,4 @@
-/* start settings */
-
+/* start zeyad code */
 body{
     margin: 0;
 }
@@ -7,6 +6,148 @@ body{
 html
 { 
     scroll-behavior: smooth;
+}
+
+.weather-container{
+    background: url('/images/7280763.jpg');
+    background-size: cover;
+    position: relative;
+    height: 180vh;
+}
+
+.weather-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+
+.weather-container .show-entries{
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.weather-container .show-entries span{
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+
+
+.table table{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+.table table tr:nth-child(even) {
+    background-color: #ddd;
+  }
+
+  .table table tr{
+    transition: 0.2s;
+  }
+
+  .table table tr:hover{
+    background-color: #162938;
+    color: white;
+  }
+
+.table thead{
+    background-color: #1d96b2;
+    color: white;
+    border: 1px solid white;
+    font-size: 19px;
+}
+
+.table thead th{
+    padding: 10px;
+}
+
+.table  td, .search-input{
+    padding: 12px;
+}
+
+.weather-container span{
+    color: white;
+    position: relative;
+    z-index: 999;
+    font-size: 40px;
+    top: 200px;
+}
+
+.weather-container span > a{
+    color: #ff4a4a;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.weather-container span > a:hover{
+    color: #a92e2e;
+}
+
+.image-links img{
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-links{
+    display: flex;
+    z-index: 999;
+    position: relative;
+    justify-content: center;
+    gap: 55px;
+    top: 60px;
+    color: var(--black-color);
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.image-links .imgb{
+    background-color: #90fffd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 13px 17px #f5f5f512;
+}
+
+.image-links .imgb a{
+    color: black;
+    font-weight: 500;
+}
+
+.search-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    width: 190px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.search-input::placeholder{
+    color: #ddd;
+    font-size: 16px;
 }
 
 .settings-container{
@@ -372,255 +513,4 @@ color: var(--black-color);
     gap: 10px;
 }
 
-/* end settings */
-
-/* start login  */
-.main-login{
-    height: 100vh;
-}
-
-.wrapper {
-    margin: auto;
-    position: relative;
-    width: 400px;
-    height: 540px;
-    background: transparent;
-    border: 2px solid rgb(255, 255, 255, 0.5);
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: height 0.2s ease;
-} 
-
-.wrapper.active {
-    height: 520px;
-}
-
-.wrapper.form-box {
-    width: 100%;
-    padding: 40px;
-} 
-
-.wrapper .form-box.login {
-    transition: transform 0.18s ease;
-    transform: translateX(0);
-}
-
-.wrapper.active .form-box.login {
-    transition: none;
-    transform: translateX(-400px);
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
-}
-
-.wrapper.active .form-box.register {
-    transition: transform 0.18s ease;
-    transform: translateX(0);
-}
-
-
-
-.form-box h2 {
-    font-size: 2em;
-    text-align: center;
-    color: #162938;
-}
-
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
-}
-
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;  /*///////*/
-}
-
-.input-box input:focus~label, /*///////*/
-.input-box input:valid~label{
-    top: -5px;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-}
-
-.login .main-button{
-    width: 100%;
-}
-
-.remember-forgot {
-    font-size: 1em;
-    color: #162938;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.remember-forgot a {
-    color: #162938;
-    text-decoration: none;
-    margin-left: 60px;
-}
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-
-
-.login-register {
-    font-size: 1em;
-    color: #162938;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
-}
-
-.login-register p a {
-    color: #162938;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.login-register p a:hover {
-    text-decoration: underline;
-}
-
-/* end login */
-
-
-/* start services */
-
-.services{
-    height: auto;
-}
-
-.services .box-container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 24px;
-}
-
-.services .box-container .box {
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-}
-
-
-
-.services .box-container .box h3 {
-    font-size: 40px;
-    color: #333;
-}
-
-.services .box-container .box p {
-    font-size: 24px;
-    color: #666;
-    padding: 16px 0;
-}
-
-.services .box-container .box:hover {
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* end services */
-
-/* start gallery */
-.gallery .box-container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 24px;
-}
-
-.gallery .box-container .box {
-    overflow: hidden;
-    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
-    border: 16px solid #fff;
-    border-radius: 8px;
-    height: 400px;
-    position: relative;
-}
-
-.gallery .box-container .box img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /*///////*/
-}
-
-.gallery .box-container .box .content {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, .7);
-    padding: 32px;
-    transition-duration: 0.3s;
-}
-
-.gallery .box-container .box:hover .content {
-    top: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* end gallery */
+/* end zeyad code */

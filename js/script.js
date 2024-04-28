@@ -1,9 +1,8 @@
-// start settings
+// start zeyad
 let theme1 = document.getElementById("theme1");
 let theme2 = document.getElementById("theme2");
 let link = document.getElementById("cssTheme");
 
-w
 
 theme2.addEventListener('click', function(){
     link.href = "css/theme1.css"
@@ -120,72 +119,36 @@ yes.addEventListener('click', function(e){
     window.location.reload();
 })
 
-// end settings
 
-// start login
-let wrapper = document.querySelector('.wrapper');
-let loginLink = document.querySelector('.login-link');
-let registerLink = document.querySelector('.register-link');
-let iconClose = document.querySelector('.icon-close');
-let forgot = document.querySelector('.forgot');
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".search-input").forEach(inputField=>{
+        const tableRows = document.querySelectorAll("tbody tr");
+        const headerCell = inputField.closest("th");     //dtermine the column index of search
+        const otherHeaderCells = inputField.closest("tr").querySelectorAll("th");
+        const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell); //turning into array first rather than a NodeList so we can use the indexOf method.
+        console.log(columnIndex);
+        const searchableCells = Array.from(tableRows)
+        .map(row => row.querySelectorAll("td")[columnIndex]); 
 
-let username = document.getElementById('username');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
-let button = document.getElementById('button');
+        console.log(searchableCells);
+    
+        inputField.addEventListener("input", ()=>{
+            const searchQuery = inputField.value.toLowerCase();
 
+            for(const tableCell of searchableCells){
+                const row = tableCell.closest("tr");   //gets the whole row of the current cell
+                const value = tableCell.textContent   //the value of the table cell
+                        .toLowerCase()
+                        .replace(",", "");  // Remove commas to allow searching by number
+                
+                row.style.visibility = null;     //to show all the rows after search
 
-iconClose.addEventListener('click',function(){
-    wrapper.style.display = 'none';
-});
+                if(value.search(searchQuery) === -1){
+                    row.style.visibility = "collapse";
+                }
+            }
+        })
+    })
+})
 
-registerLink.addEventListener('click',function(){
-    wrapper.classList.add('active');
-});
-
-loginLink.addEventListener('click',function(){
-    wrapper.classList.remove('active');
-});
-
-forgot.addEventListener('click',function(){
-    wrapper.classList.add('active');
-});
-
-
-
-
-
-
-
-
-
-
-
-let informationUser;
-
-if(localStorage.Data != null){
-    informationUser = JSON.parse(localStorage.Data)
-}else{
-    informationUser = [];
-}
-
-button.onclick = function() {
-    let object = {
-        username:username.value,
-        email:email.value,
-        password:password.value,
-    }
-    informationUser.push(object)
-    localStorage.setItem('Data', JSON.stringify(informationUser))
-    clearData()
-}
-
-function clearData(){
-    username.value='';
-    email.value='';
-    password.value='';
-}
-
-
-
-// end login
+// end zeyad
