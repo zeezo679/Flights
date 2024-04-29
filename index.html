@@ -9,13 +9,139 @@
     <link rel="stylesheet" href="css/icons.css">
 </head>
 <body>
-    <div class="main-container">        
+    <div class="main-container">       
+        <div class="hamed">
+            <header>
+                <nav class="nav">
+                  <div id="p">
+                        <p>Flyout</p>
+                  </div>
+                
+                  <div  id="imges">
+                        <a href="#home" class="i">Home</a>   
+                        <a href="#packages"class="i">packages</a>   
+                        <a href="#book" class="i">BOOK</a>   
+                        <a href="#services"class="i">Services</a>   
+                        <a href="#gallery" class="i">Gallery</a>   
+                        <a href="#review" class="i">Review</a>  
+                        <a href="#weather" class="i">Weather Forecast</a>  
+                        <a href="#settings" class="d">Settings</a> 
+                         <div class="k">
+                           <a href="#log"  class="f" >login</a>          
+                </div>
+                  </div>
+                
+                </nav>
+                
+                <nav class="input">
+                  <input type="text" id="sear" class="hide" placeholder="search">
+                </nav>
+            
+            
+            
+              </header>
+              <!-- 
+                -----------------------------------------------------------------
+               -->
+            
+            
+            
+            
+            
+              <section id="sec">
+                 <article>
+                  <div class="par">
+                    ADVENTURE IS WORTHWHILE
+                  </div>
+                  <div class="ha">
+                          Discover New Places With Us,Adventure Awaits
+                  </div>
+                  <div class="select">
+                  <input type="radio" clas="sel" name="n" id="1" selected>
+                  <input type="radio" clas="sel" name="n" id="2">
+                  <input type="radio" clas="sel" name="n" id="3">
+                  <input type="radio" clas="sel" name="n" id="4">
+                  <input type="radio" clas="sel" name="n" id="5">
+                 
+                   </div>
+                 
+                 </article>
+              </section>
+        </div> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="main-login" id="log">
+            <div class="wrapper">
+                <span class="icon-close"><ion-icon name="close"></ion-icon></span>
         
+                <div class="form-box login">
+                    <h2>login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon>
+                            </span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                            </span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
+                            Remember me</label>
+                            <a href="#" class="forgot">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="main-button">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                <!-- the Registeration__________________________________________________________________________________________________________ -->
+                <div class="form-box register">
+                    <h2>Registeration</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person"></ion-icon>
+                            </span>
+                            <input type="text" id="username" required>
+                            <label>Username</label>
+                        </div>
+        
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon>
+                            </span>
+                            <input type="email" id="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                            </span>
+                            <input type="password" id="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
+                            I agree to the terms & conditions</label>
+                        </div>
+                        <button type="submit" class="main-button" id="button" style="width: 100%;">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="hazem">
 
             <div class="container">
 
-                <h1 class="heading">
+                <h1 class="heading" id="book">
                     <span>B</span>
                     <span>O</span>
                     <span>O</span>
@@ -54,7 +180,7 @@
                                 <br><br>
                                 <input list="from" required placeholder="Leaving from" name="from" id="from" />
                                 <datalist id="from">
-                                    <option value="Afghanistan" />
+                                    <option value="Afghanistan" >
                                     <option value="Albania" />
                                     <option value="Algeria" />
                                     <option value="American Samoa" />
@@ -2642,7 +2768,7 @@
 
             <!-- -------- -->
 
-            <h1 class="heading">
+            <h1 class="heading" id="packages">
                 <span>P</span>
                 <span>A</span>
                 <span>K</span>
@@ -2814,71 +2940,7 @@
     </div>
 
     <!-- start login -->
-    <div class="main-login" id="log">
-        <div class="wrapper">
-            <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-    
-            <div class="form-box login">
-                <h2>login</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon>
-                        </span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
-                        Remember me</label>
-                        <a href="#" class="forgot">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="main-button">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    </div>
-                </form>
-            </div>
-            <!-- the Registeration__________________________________________________________________________________________________________ -->
-            <div class="form-box register">
-                <h2>Registeration</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" id="username" required>
-                        <label>Username</label>
-                    </div>
-    
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="mail"></ion-icon>
-                        </span>
-                        <input type="email" id="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon"><ion-icon name="lock-closed"></ion-icon>
-                        </span>
-                        <input type="password" id="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
-                        I agree to the terms & conditions</label>
-                    </div>
-                    <button type="submit" class="main-button" id="button" style="width: 100%;">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+   
 
 
     <!-- end login -->
@@ -2887,7 +2949,7 @@
 
 
     <!-- start services -->
-<section class="services">
+<section class="services" id="services">
     <h1 class="title">Services</h1>
     <div class="box-container">
         <div class="box">
@@ -2939,7 +3001,7 @@
     <!-- end services -->
 <hr>
 <!-- start gallery -->
-<section class="gallery">
+<section class="gallery" id="gallery">
     <h1 class="title">gallery</h1>
     <div class="box-container">
         <div class="box">
@@ -3282,7 +3344,7 @@
             <hr class="first">
             <div class="settings-body">
                 <div class="form">
-                    <h4>Your Profile</h4>
+                    <h4 id="profile-change" >Your Profile</h4>
                     <p>You can edit your profile here.</p>
                     <form action="">
                         <div class="inputs">
@@ -3343,6 +3405,15 @@
                 </div>
             </div>
         </div>
+        <div class="login-pop-up" id="lgpop-up">
+            <div class="text">
+                <h5>Please, Login or Signup first</h5>
+                <p style="color: #333;">Cannot change your data because you dont have an account</p>
+            </div>
+            <div class="buttons">
+                <button class="yes" id="ok">OK</button>
+            </div>
+        </div>
         <div class="scroll-top" id="scroll"><span class="material-symbols-outlined">
             flight
             </span></div>
@@ -3350,7 +3421,13 @@
     <!-- settings end -->
     </div>
     
-    
+     <!-- ======================================================================= -->
+     <footer>
+         <div id="sec22">
+           the best way to book your ticket and enjoy your trip with (Flyout)
+           <br>
+           All Rights Reserved
+      </footer>
     
     <script src="index.js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

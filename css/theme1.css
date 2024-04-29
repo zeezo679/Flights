@@ -2,10 +2,10 @@
 
 
 .main-container{
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 500;
+    font-family: "Open Sans", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
 }
 
 

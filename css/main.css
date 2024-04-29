@@ -1,3 +1,185 @@
+/* hamed start */
+
+
+.hamed section {
+    margin-bottom: 10px;
+  }
+  
+  .hamed .nav {
+    width: 100%;
+    height: 40px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hamed .input {
+    position: relative;
+  }
+  
+  .hamed #p {
+    display: flex;
+    position: absolute;
+    left: 15px;
+    margin-left: 20px;
+    top: -15px;
+    font-size: 18px;
+  }
+  
+  .hamed .but {
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    border: none;
+  }
+  
+  .hamed #s {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed #no {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed p {
+    width: 40px;
+    color: #fff;
+    text-align: left;
+    border: rgb(51, 51, 51) solid 5px;
+    border-radius: 10px;
+  }
+  
+  .hamed .s {
+    background-color: orange;
+  }
+  
+  .hamed .k {
+    position: absolute;
+    right: 4px;
+    bottom: 10px;
+  }
+  
+  .hamed .f {
+    text-decoration-line: none;
+    color: #fff;
+  }
+  
+  .hamed .d {
+    text-decoration-line: none;
+    color: #fff;
+    margin-right: 100px;
+    margin-left: 10px;
+  }
+  
+  .hamed .d:hover {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed .f:hover {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed .d:hover {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed .i {
+    text-decoration-line: none;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .hamed .i:hover {
+    background-color: rgb(51, 51, 51);
+  }
+  
+  .hamed #imges {
+    padding-top: 10px;
+    position: relative;
+  }
+  
+  .hamed .hide {
+    display: none;
+  }
+  
+  /* ///////////////////////////////////////////////////////////////////////////////////////////// */
+  
+  .hamed section {
+    width: 100%;
+    height: 790px;
+    background-image: url('/images/img1.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    position: relative;
+  }
+  
+  .hamed .par {
+    position: absolute;
+    left: 260px;
+    top: 80px;
+    font-size: xx-large;
+    color: #f0f;
+  }
+  
+  .hamed .ha {
+    position: absolute;
+    left: 346px;
+    top: 130px;
+    font-size: medium;
+    color: #088;
+  }
+  
+  .hamed .select {
+    padding: 0px;
+    width: 127px;
+    height: 20px;
+    position: absolute;
+    left: 380px;
+    top: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: black;
+  }
+  
+  .hamed .all {
+    position: absolute;
+  }
+  
+  /* ------------------------------------------------------------------------------------ */
+  .hamed #i1i {
+    margin-left: 90px;
+  }
+  
+  #sec22 {
+    background-color: rgb(51, 102, 153);
+    width: 100%;
+    height: fit-content;
+    font-size: xx-large;
+    color: wheat;
+  }
+  
+  .hamed .tagfoo {
+    background-color: wheat;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hamed #a1,
+  .hamed #a2 {
+    margin: 90px;
+    display: inline;
+    text-decoration-line: none;
+    color: black;
+  }
+  
+/* hamed end */
+
+
+
 /* start zeyad code */
 body{
     margin: 0;
@@ -513,6 +695,59 @@ color: var(--black-color);
     gap: 10px;
 }
 
+.login-pop-up{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 415px;
+    border-radius: 8px;
+    box-shadow: -1px 5px 19px 3px black;
+    transition: transform 0.3s ease;
+}
+
+.login-pop-up h5{
+    color: #ff4a4a;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.login-pop-up p{
+margin-bottom: 30px;
+}
+
+.login-pop-up .buttons{
+display: flex;
+gap: 10px;
+}
+
+.login-pop-up .yes{
+padding: 2px 15px;
+width: 100px;
+height: 38px;
+background-color: #2b244c;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+transition: 200ms;
+color: white;
+font-size: 14px;
+font-weight: 600;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
 /* end zeyad code */
 
 /* start hzm */
@@ -532,7 +767,6 @@ color: var(--black-color);
     border-radius: .5rem;
     padding: .2rem 1rem;
     margin-right: 1px; /* corrected from margin: right 1px; */
-    font-family: "Poppins", sans-serif;
     font-weight: 800;
 }
 
@@ -712,8 +946,7 @@ color: var(--black-color);
 
 /* start login  */
 .main-login{
-    height: 100vh;
-    display: none;
+    height: auto;
 }
 
 .wrapper {
