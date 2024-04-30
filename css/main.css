@@ -1,8 +1,13 @@
 /* hamed start */
 
 
+
 .hamed section {
     margin-bottom: 10px;
+  }
+
+  .ticket{
+    height: 100vh;
   }
   
   .hamed .nav {
@@ -178,7 +183,375 @@
   
 /* hamed end */
 
+/* start ahmed */
 
+.ahmed .rev-container{
+    background-color: rgb(31, 30, 54);
+}
+
+#btn1,#btn2,#btn3,#btn4{
+    width: 80px;
+    height: 27px;
+    margin: 10px 0 0 10px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #378bc6;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover{
+    opacity: 0.8;
+}
+
+h1{
+    letter-spacing: 12px;
+    margin-top: 50px;
+    font-size: 70px;
+    color: white;
+    text-shadow: 1px -1px;
+    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+      /* Box 1 */
+
+.flex{
+    
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flex div{
+    background-color: rgb(255 245 255);
+    width: 285px ;
+    height: 345px;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 20px;
+    border-radius: 7px;
+    box-shadow: 3px -1px 2px 1px rgb(90,64,64,1);
+    animation-name: right-to-left;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+  
+}
+.flex div img{
+    width: 100px;
+    height: 100PX;
+    border-radius: 50%;
+}
+
+
+
+        /* Box 2 */
+
+.flex2{
+    
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.flex2 div{
+    background-color: rgb(196 159 218);
+    width: 285px;
+    height: 345px;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 20px;
+    border-radius: 7px;
+    box-shadow: 3px -1px 2px 1px rgb(90, 64, 64, 1);
+    animation-name: right-to-left;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.flex2 div img{
+    width: 100px;
+    height: 100PX;
+    border-radius: 50%;
+}
+
+   /* Box 3 */
+
+.flex3{
+    
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.flex3 div{
+    background-color: rgb(213 218 203);
+    width: 285px;
+    height: 345px;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 20px;
+    border-radius: 7px;
+    box-shadow: 3px -1px 2px 1px rgb(90, 64, 64, 1);
+    animation-name: right-to-left;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.flex3 div img{
+    width: 100px;
+    height: 100PX;
+    border-radius: 50%;
+}
+
+   /* Box 4 */
+
+.flex4{
+    
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.flex4 div{
+    background-color: rgb(71 192 211 / 55%);
+    width: 285px;
+    height: 345px;
+    margin-left: 10px;
+    padding: 20px;
+    text-align: center;
+    word-break: break-all;
+    line-height: 20px;
+    border-radius: 7px;
+    box-shadow: 3px -1px 2px 1px rgb(90, 64, 64, 1);
+    animation-name: right-to-left;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.flex4 div img{
+    width: 100px;
+    height: 100PX;
+    border-radius: 50%;
+}
+
+
+.containerbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover{
+    display: flex;
+    overflow: hidden;
+}
+
+.bigcontainer{
+    display: flex;
+    width: 885px;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 275px;
+    background-color: rgb(43 30 54 / 80%);
+}
+
+.par{
+    font-size: 19px;
+}
+
+
+    @keyframes right-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-202px *9));
+        }
+        
+    }
+
+
+.bigcontainer:hover div{
+    animation-play-state: paused;
+}    
+
+
+.star{
+    color: yellow;
+    border-color: black;
+    margin-top: -10px;
+    margin-bottom: 3px;
+}
+
+
+
+.hide{
+    display: none;
+}
+
+.ahmed .container{
+    background-color: rgb(61 100 215 /73%);
+}
+
+.ahmed .header {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/istockphoto-1169630303-170667a.webp");
+    color: white;
+    letter-spacing: 2px;
+}
+
+.ahmed .Egyptair {
+    display: flex;
+    justify-content: left;
+}
+
+.ahmed .Egyptairbox {
+    width: 808px;
+    height: 406px;
+    padding: 27px 29px 50px 26px;
+    margin: 30px 15px 20px 60px;
+    border: 1px solid rgba(114 102 105 / 10%);
+    display: flex;
+    margin-bottom: 20px;
+    background: #fff;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.ahmed .headerEgyptair {
+    margin: -10px 0 14px;
+}
+
+.ahmed .Egyptair .Egyptairbox img {
+    width: 390px;
+    height: 360px;
+    margin: 0 20px;
+    border-radius: 7px;
+    float: right;
+}
+
+.ahmed .flynas {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.ahmed .flynasbox {
+    width: 900px;
+    padding: 27px 29px 50px 26px;
+    margin: 30px 15px 20px 60px;
+    border: 1px solid rgba(114 102 105 / 10%);
+    margin-bottom: 20px;
+    background: #fff;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.ahmed .flynas .flynasbox img {
+    width: 600px;
+    height: 350px;
+    margin-left: 125px;
+    border-radius: 7px;
+}
+
+.ahmed .headerflynas {
+    margin: -20px 0 10px;
+}
+
+.ahmed .Qatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.ahmed .Qatarbox {
+    width: 900px;
+    padding: 27px 29px 50px 26px;
+    margin: 30px 15px 20px 60px;
+    border: 1px solid rgba(114 102 105 / 10%);
+    margin-bottom: 20px;
+    background: #fff;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.ahmed .Qatar .Qatarbox img {
+    width: 600px;
+    height: 350px;
+    margin-left: 125px;
+    border-radius: 7px;
+}
+
+.ahmed .headerQatar {
+    margin: -20px 0 10px;
+}
+
+.ahmed .para {
+    font-weight: 600;
+}
+
+.ahmed .sidebar {
+    position: relative;
+}
+
+.ahmed .sidebar .side {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 20px;
+    bottom: 375px;
+    border: 1px solid black;
+}
+
+.ahmed .sidebar .side .headerad {
+    text-align: center;
+    background-color: beige;
+}
+
+.ahmed .sidebar .side img {
+    width: 100%;
+    height: 91%;
+}
+
+.ahmed .frame {
+    margin-left: 40px;
+    width: 500px;
+    height: 300px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+/* end ahmed */
 
 /* start zeyad code */
 body{
@@ -194,7 +567,7 @@ html
     background: url('/images/7280763.jpg');
     background-size: cover;
     position: relative;
-    height: 180vh;
+    height: 200vh;
 }
 
 .weather-container::before{

@@ -1,0 +1,30 @@
+body{
+background: url("/images/ticket.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+}
+
+
+
+img{
+    width: 100%;
+}
+.td{
+    font-family: monospace;
+    color:black(0, 83, 248)
+    
+}
+
+#con{
+    text-align: center;
+    
+}
+table{
+    border:rgb(0, 0, 0) solid 1px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: red;
+}

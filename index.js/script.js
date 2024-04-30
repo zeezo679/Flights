@@ -486,3 +486,44 @@ i5.onclick=function()
 section.style.backgroundImage='url("images/last.png")';
 }
 // hamed end
+
+
+
+// ahmed start
+let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+        let btn4 = document.getElementById('btn4');
+        let box1 = document.getElementById('box1');
+        let box2 = document.getElementById('box2');
+        let box3 = document.getElementById('box3');
+        let box4 = document.getElementById('box4');
+
+        btn1.onclick=function(){
+           box1.classList.remove("hide");
+            box2.classList.add("hide");
+            box3.classList.add("hide");
+            box4.classList.add("hide");
+        }
+
+        btn2.onclick=function(){
+           box2.classList.remove("hide");
+            box1.classList.add("hide");
+            box3.classList.add("hide");
+            box4.classList.add("hide");
+        }
+
+        btn3.onclick=function(){
+           box3.classList.remove("hide");
+            box1.classList.add("hide");
+            box2.classList.add("hide");
+            box4.classList.add("hide");
+        }
+
+        btn4.onclick=function(){
+            box4.classList.remove("hide");
+            box1.classList.add("hide");
+            box2.classList.add("hide");
+            box3.classList.add("hide");
+        }
+// ahmed end
