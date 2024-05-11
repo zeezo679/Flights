@@ -162,60 +162,192 @@ let registerLink = document.querySelector('.register-link');
 let iconClose = document.querySelector('.icon-close');
 let forgot = document.querySelector('.forgot');
 
-let username = document.getElementById('username');
-let email = document.getElementById('email');
-let password = document.getElementById('password');
+
+
+let registerUsername = document.getElementById('username');
+let registerEmail = document.getElementById('email');
+let registerPassword = document.getElementById('password');
+let form = document.getElementById('form');
 let button = document.getElementById('button');
 
+
+
+
+let loginButton1 = document.getElementById('login-button1');
+let loginForm = document.getElementById('login-form');
+let loginEmail = document.getElementById('login-email');
+let loginPassword = document.getElementById('login-password');
+
+
+let popUp = document.getElementById('pop-up');
+let oki = document.getElementById('oki');
 
 iconClose.addEventListener('click',function(){
     wrapper.style.display = 'none';
 });
 
 registerLink.addEventListener('click',function(){
-    event.preventDefault();
     wrapper.classList.add('active');
 });
 
 loginLink.addEventListener('click',function(){
-    event.preventDefault();
     wrapper.classList.remove('active');
 });
 
 forgot.addEventListener('click',function(){
-
     wrapper.classList.add('active');
 });
 
-
-
-
+// ________________
 
 let informationUser;
-
-if(localStorage.Data != null){
-    informationUser = JSON.parse(localStorage.Data)
-}else{
-    informationUser = [];
-}
-
-button.onclick = function() {
-    let object = {
-        username:username.value,
-        email:email.value,
-        password:password.value,
+    if(localStorage.Data != null){
+        informationUser = JSON.parse(localStorage.Data)
+    }else{
+        informationUser = [];
     }
-    informationUser.push(object)
-    localStorage.setItem('Data', JSON.stringify(informationUser))
-    clearData()
+    button.onclick = function() {
+    const usernameValue = registerUsername.value.trim();
+    const emailValue = registerEmail.value.trim();
+    const passwordValue = registerPassword.value.trim();
+
+    if(validateInputs(usernameValue, emailValue, passwordValue)){
+        let object = {
+            username:usernameValue,
+            email:emailValue,
+            password:passwordValue,
+        }
+        informationUser.push(object)
+        localStorage.setItem('Data', JSON.stringify(informationUser))
+        clearData()  
+    }}
+    oki.onclick = function(){
+        popUp.classList.remove('open');
+    }
+
+    loginButton1.addEventListener('click',function() {
+        const emailValue1 = loginEmail.value.trim();
+        const passwordValue1 = loginPassword.value.trim();
+    function show_pop() {
+        popUp.classList.add('open');
+    }
+
+        if(validateLoginInputs(emailValue1, passwordValue1)){
+        let userExists = false;
+        for(let i=0; i<informationUser.length; i++){
+            if(informationUser[i].email === emailValue1 && informationUser[i].password === passwordValue1){
+                userExists = true;
+                break;
+            }
+        }
+
+        if(userExists){
+        } else {
+            show_pop();
+        }
+
+        clearDataLogin();
+    }
+    });
+
+    function clearDataLogin() {
+        loginEmail.value='';
+        loginPassword.value='';
+    }
+
+    function clearData(){
+        registerUsername.value='';
+        registerEmail.value='';
+        registerPassword.value='';
+    }
+        
+
+// validation
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputBox = element.parentElement;
+    const errorDisplay = inputBox.querySelector('.error');
+
+    errorDisplay.innerText = message;
 }
 
-function clearData(){
-    username.value='';
-    email.value='';
-    password.value='';
-    location.reload();
+const setSuccess = element => {
+    const inputBox = element.parentElement;
+    const errorDisplay = inputBox.querySelector('.error');
+
+    errorDisplay.innerText = '';
+};
+
+const isValidEmail = registerEmail => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(registerEmail).toLowerCase());
 }
+
+const validateInputs = (usernameValue, emailValue, passwordValue) => {
+    
+    if(usernameValue === ''){
+        setError(registerUsername, 'Username is required');
+        return false;
+    } else {
+        setSuccess(registerUsername);
+    }
+
+    if(emailValue === ''){
+        setError(registerEmail, 'Email is required');
+        return false;
+    } else if (!isValidEmail(emailValue)){
+        setError(registerEmail, 'Provide a valid email address');
+        return false;
+    } else {
+        setSuccess(registerEmail)
+    }
+
+    if(passwordValue === ''){
+        setError(registerPassword, 'Password is required');
+        return false;
+    } else if (passwordValue.length < 8){
+        setError(registerPassword, 'Password must be at least 8 character.');
+        return false;
+    } else {
+        setSuccess(registerPassword);
+    }
+
+    return true;
+};
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateLoginInputs();
+});
+
+const validateLoginInputs = (emailValue1, passwordValue1) => {
+    if(emailValue1 === ''){
+        setError(loginEmail, 'Email is required');
+        return false;
+    }else if (!isValidEmail(emailValue1)){
+        setError(loginEmail, 'Provide a valid email address');
+        return false;
+    } else {
+        setSuccess(loginEmail);
+    }
+
+    if(passwordValue1 === ''){
+        setError(loginPassword, 'Password is required');
+        return false;
+    } else if (passwordValue1.length < 8){
+        setError(loginPassword, 'Password must be at least 8 character.');
+        return false;
+    } else {
+        setSuccess(loginPassword);
+    }
+    return true;
+};
 
 
 
@@ -256,10 +388,10 @@ let Password;
 
 let headerName = document.getElementById("profile-change");
 
-let userData = localStorage.getItem('Data');
+let userData = localStorage.getItem('Data');    //getting the data from the login form local storage
     if(userData != null){
-        let data = JSON.parse(userData);
-        if(data.length > 0){
+        let data = JSON.parse(userData);       //to convert the data to a JS Object
+        if(data.length > 0){    //if there is data...
             user = data[0];                 //the first object set (first user details)
             userName = user.username;       //getting the username
             Email = user.email;
@@ -398,7 +530,7 @@ window.addEventListener('scroll', (e) => {
 
 
 let deletAcct = document.getElementById("delete-account");
-let pop = document.getElementById("pop-up");
+let pop = document.getElementById("popup");
 let no = document.getElementById("no");
 let yes = document.getElementById("yes");
 
@@ -419,7 +551,7 @@ yes.addEventListener('click', function(e){
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".search-input").forEach(inputField=>{
-        const tableRows = document.querySelectorAll("tbody tr");
+        const tableRows = document.querySelectorAll(".tbody tr");
         const headerCell = inputField.closest("th");     //dtermine the column index of search
         const otherHeaderCells = inputField.closest("tr").querySelectorAll("th");
         const columnIndex = Array.from(otherHeaderCells).indexOf(headerCell); //turning into array first rather than a NodeList so we can use the indexOf method.
@@ -460,11 +592,12 @@ let i2=document.getElementById('2')
 let i3=document.getElementById('3')
 let i4=document.getElementById('4')
 let i5=document.getElementById('5')
-console.log(i1)
-console.log(i2)
-console.log(i3)
-console.log(i4)
-console.log(i5)
+let login = document.getElementsByClassName("k");
+console.log(login)
+login[0].onclick = function(){
+    wrapper.style.display = 'flex';
+}
+
 i1.onclick=function()
 {
 section.style.backgroundImage='url("images/img1.gif")';
@@ -527,3 +660,52 @@ let btn1 = document.getElementById('btn1');
             box3.classList.add("hide");
         }
 // ahmed end
+
+
+// khaled gallery
+let bton1 = document.getElementById('btn1');
+let bton2 = document.getElementById('btn2');
+let bton3 = document.getElementById('btn3');
+let bton4 = document.getElementById('btn4');
+let bton5 = document.getElementById('btn5');
+let bton6 = document.getElementById('btn6');
+let bton7 = document.getElementById('btn7');
+let bton8 = document.getElementById('btn8');
+let bton9 = document.getElementById('btn9');
+
+bton1.addEventListener('click',function(){
+    location.assign('https://ar.wikipedia.org/wiki/%D8%AA%D9%85%D8%AB%D8%A7%D9%84_%D8%A7%D9%84%D8%AD%D8%B1%D9%8A%D8%A9');
+});
+
+bton2.addEventListener('click',function(){
+    location.assign('https://www.ajnet.me/encyclopedia/2024/2/9/%D8%A8%D8%B1%D8%AC-%D8%A8%D9%8A%D8%B2%D8%A7-%D8%A7%D9%84%D9%85%D8%A7%D8%A6%D9%84');
+});
+
+bton3.addEventListener('click',function(){
+    location.assign('https://www.sis.gov.eg/Story/121619/%D8%A7%D9%84%D8%A3%D9%87%D8%B1%D8%A7%D9%85%D8%A7%D8%AA?lang=ar');
+});
+
+bton4.addEventListener('click',function(){
+    location.assign('https://www.un.org/ungifts/ar/%D8%A7%D9%84%D8%B3%D9%88%D8%B1-%D8%A7%D9%84%D8%B9%D8%B8%D9%8A%D9%85');
+});
+
+bton5.addEventListener('click',function(){
+    location.assign('https://www.japan.travel/ar/spot/1691/');
+});
+
+bton6.addEventListener('click',function(){
+    location.assign('https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D8%AE%D9%84%D9%8A%D9%81%D8%A9');
+});
+
+bton7.addEventListener('click',function(){
+    location.assign('https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6');
+});
+
+bton8.addEventListener('click',function(){
+    location.assign('https://ar.wikipedia.org/wiki/%D8%A5%D8%B3%D8%B7%D9%86%D8%A8%D9%88%D9%84');
+});
+
+bton9.addEventListener('click',function(){
+    location.assign('https://mawdoo3.com/%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA_%D8%AD%D9%88%D9%84_%D8%AC%D8%B2%D8%B1_%D8%A7%D9%84%D9%85%D8%A7%D9%84%D8%AF%D9%8A%D9%81');
+});
+// khaled gallery

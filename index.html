@@ -73,71 +73,84 @@
         <br>
         <br>
         <br>
-        <div class="main-login" id="log">
-            <div class="wrapper">
-                <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-        
-                <div class="form-box login">
-                    <h2>login</h2>
-                    <form action="#">
-                        <div class="input-box">
-                            <span class="icon"><ion-icon name="mail"></ion-icon>
-                            </span>
-                            <input type="email" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="input-box">
-                            <span class="icon"><ion-icon name="lock-closed"></ion-icon>
-                            </span>
-                            <input type="password" required>
-                            <label>Password</label>
-                        </div>
-                        <div class="remember-forgot">
-                            <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
-                            Remember me</label>
-                            <a href="#" class="forgot">Forgot Password?</a>
-                        </div>
-                        <button type="submit" class="main-button">Login</button>
-                        <div class="login-register">
-                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                        </div>
-                    </form>
+        <div class="main-login" id="">
+           <!-- start login -->
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+
+        <div class="form-box login">
+            <h2>login</h2>
+            <form action="#" id="login-form">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" id="login-email" required>
+                    <label>Email</label>
+                    <div class="error"></div>
                 </div>
-                <!-- the Registeration__________________________________________________________________________________________________________ -->
-                <div class="form-box register">
-                    <h2>Registeration</h2>
-                    <form action="#">
-                        <div class="input-box">
-                            <span class="icon"><ion-icon name="person"></ion-icon>
-                            </span>
-                            <input type="text" id="username" required>
-                            <label>Username</label>
-                        </div>
-        
-                        <div class="input-box">
-                            <span class="icon"><ion-icon name="mail"></ion-icon>
-                            </span>
-                            <input type="email" id="email" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="input-box">
-                            <span class="icon"><ion-icon name="lock-closed"></ion-icon>
-                            </span>
-                            <input type="password" id="password" required>
-                            <label>Password</label>
-                        </div>
-                        <div class="remember-forgot">
-                            <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
-                            I agree to the terms & conditions</label>
-                        </div>
-                        <button type="submit" class="main-button" id="button" style="width: 100%;">Register</button>
-                        <div class="login-register">
-                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                        </div>
-                    </form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="login-password" required>
+                    <label>Password</label>
+                    <div class="error"></div>
                 </div>
-            </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
+                    Remember me</label>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" id="login-button1">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
         </div>
+        <!-- the Registeration____________________________________ -->
+        <div class="form-box register">
+            <h2>Registeration</h2>
+            <form id="form" action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="text" id="email" required>
+                    <label>Email</label>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon>
+                    </span>
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                    <div class="error"></div>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> <!-- used replacement for and id in label,input -->
+                    I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn" id="button">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="login-account">
+        <div class="pop-up" id="pop-up">
+            <h4>Warning!</h4>
+            <p>This account does not exist</p>
+            <button class="ok" id="oki">OK</button>
+        </div>
+    </div>
+    <!-- end login -->
         <div class="hazem">
 
             <div class="container">
@@ -2943,138 +2956,230 @@
 
 
 
-
-
-    <!-- start services -->
-<section class="services" id="services">
-    <h1 class="title">Services</h1>
-    <div class="box-container">
-        <div class="box">
-            <i><ion-icon name="ticket"></ion-icon></i>
-            <h3>ticket reservation</h3>
-            <p>Our company provides flight ticket
-                reservation service to various destinations around the world
-                Customers can search and compare different flights to choose the perfect option</p>
-        </div>
-        <div class="box">
-            <i><ion-icon name="construct"></ion-icon>
-            </i>
-            <h3>manage reservations</h3>
-            <p>We allow customers to easily modify or cancel their reservations through our electronic platform
-            </p>
-        </div>
-        <div class="box">
-            <i><ion-icon name="color-wand"></ion-icon>
-            </i>
-            <h3>Special offers and discounts</h3>
-            <p>Special offers and discounts with our customers through social media and call center to provide the best possible service
-            </p>
-        </div>
-        <div class="box">
-            <i><ion-icon name="earth"></ion-icon>
-            </i>
-            <h3>continuous communication</h3>
-            <p>We maintain communication with our customers through social media and call center to provide the best possible service.
-            </p>
-        </div>
-        <div class="box">
-            <i><ion-icon name="bed"></ion-icon>
-            </i>
-            <h3>affordable hotel</h3>
-            <p>We offer you the best hotels at reasonable prices and many services, and these hotels range from three to five stars
-            </p>
-        </div>
-        <div class="box">
-            <i><ion-icon name="fast-food"></ion-icon>
-            </i>
-            <h3>food and drinks</h3>
-            <p>We provide you with high-quality service on board, high-quality food and drink, and highly experienced flight attendants
-            </p>
-        </div>
-    </div>
+    <table>
+        <caption class="title">More Services</caption>
+        <thead>
+            <tr>
+                <th>Service Name</th>
+                <th>Services Description</th>
+                <th>Service Cost</th>
+                <th>Service Requirements</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Flight Booking</td>
+                    <td>Book a flight ticket for your desired destination.</td>
+                    <td class="text-align">$150</td>
+                    <td>None</td>
+                </tr>
+                <tr class="different">
+                    <td>Seat Selection</td>
+                    <td>Select your preferred seat on the flight.</td>
+                    <td class="text-align">$20</td>
+                    <td>Flight Number</td>
+                </tr>
+                <tr>
+                    <td>Baggage Upgrade</td>
+                    <td>Upgrade your baggage allowance for extra luggage.</td>
+                    <td class="text-align">$30</td>
+                    <td>Reservation Number</td>
+                </tr>
+                <tr class="different">
+                    <td>Priority Boarding</td>
+                    <td>Get priority boarding for quicker access to the aircraft.</td>
+                    <td class="text-align">$10</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>In-flight Meal Selection</td>
+                    <td>choose your meal prefernce for the flight.</td>
+                    <td class="text-align">$15</td>
+                    <td>Passenger Name and flight Number</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <!-- start services -->
+        <section class="services">
+            <h1 class="title">Basic Services</h1>
+            <div class="box-container">
+                <div class="box">
+                    <i><ion-icon name="ticket"></ion-icon></i>
+                    <h3>ticket reservation</h3>
+                    <p>Our company provides flight ticket
+                        reservation service to various destinations around the world
+                        Customers can search and compare different flights to choose the perfect option</p>
+                </div>
+                <div class="box">
+                    <i><ion-icon name="construct"></ion-icon>
+                    </i>
+                    <h3>manage reservations</h3>
+                    <p>We allow customers to easily modify or cancel their reservations through our electronic platform
+                    </p>
+                </div>
+                <div class="box">
+                    <i><ion-icon name="color-wand"></ion-icon>
+                    </i>
+                    <h3>Special offers and discounts</h3>
+                    <p>Special offers and discounts with our customers through social media and call center to provide the best possible service
+                    </p>
+                </div>
+                <div class="box">
+                    <i><ion-icon name="earth"></ion-icon>
+                    </i>
+                    <h3>continuous communication</h3>
+                    <p>We maintain communication with our customers through social media and call center to provide the best possible service.
+                    </p>
+                </div>
+                <div class="box">
+                    <i><ion-icon name="bed"></ion-icon>
+                    </i>
+                    <h3>affordable hotel</h3>
+                    <p>We offer you the best hotels at reasonable prices and many services, and these hotels range from three to five stars
+                    </p>
+                </div>
+                <div class="box">
+                    <i><ion-icon name="fast-food"></ion-icon>
+                    </i>
+                    <h3>food and drinks</h3>
+                    <p>We provide you with high-quality service on board, high-quality food and drink, and highly experienced flight attendants
+                    </p>
+                </div>
+            </div>
+        </section>
+            <!-- end services -->
     
-</section>
-
-    <!-- end services -->
-<hr>
-<!-- start gallery -->
-<section class="gallery" id="gallery">
-    <h1 class="title">gallery</h1>
-    <div class="box-container">
-        <div class="box">
-            <img src="images/istockphoto-492730544-612x612.jpg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>The Statue of Liberty is a legacy in America that France gave to America</p>
-                <a href="#" class="main-button">see more</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- start gallery -->
+    <section class="gallery">
+        <h1 class="title">gallery</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/istockphoto-492730544-612x612.jpg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>The Statue of Liberty is a legacy in America that France gave to America</p>
+                    <button class="main-button" id="btn1">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/pexels-photo-4388287.jpeg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>It is one of the most famous places in Italy. I advise you to go there</p>
+                    <button class="main-button" id="btn2">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/pexels-photo-7566890.jpeg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>These are the Pyramids of Giza, one of the Seven Wonders of the World</p>
+                    <button class="main-button" id="btn3">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/pexels-photo-2304791.jpeg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>The Great Wall of China is the border wall extending to northern and northwestern</p>
+                    <button class="main-button" id="btn4">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/pexels-photo-6039219.jpeg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>This temple is located in the city of Narita , Japan, is a historically important</p>
+                    <button class="main-button" id="btn5">see more</button> 
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/dubai-tower-arab-khalifa-162031.jpeg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Burj Khalifa is one of the most famous and important towers in Dubai</p>
+                    <button class="main-button" id="btn6">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/istockphoto-587532934-612x612.jpg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Saudi Arabia is one of the most advanced and important countries in the world</p>
+                    <button class="main-button" id="btn7">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/istockphoto-492730544-612x612.jpg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Istanbul is one of the best tourist places in Türkiye and it overlooks the sea</p>
+                    <button class="main-button" id="btn8">see more</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/istockphoto-587532934-612x612.jpg" alt="...">
+                <div class="content">
+                    <h3>amazing places</h3>
+                    <p>The Maldives is one of the most visited regions by tourists, located in the Indian Ocean</p>
+                    <button class="main-button" id="btn9">see more</button>
+                </div>
             </div>
         </div>
-        <div class="box">
-            <img src="images/pexels-photo-4388287.jpeg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>It is one of the most famous places in Italy. I advise you to go there</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/pexels-photo-7566890.jpeg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>These are the Pyramids of Giza, one of the Seven Wonders of the World</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/pexels-photo-2304791.jpeg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>The Great Wall of China is the border wall extending to northern</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/pexels-photo-6039219.jpeg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>This temple is located in the city of Narita , Japan, is a historically important</p>
-                <a href="#" class="main-button">see more</a> 
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/dubai-tower-arab-khalifa-162031.jpeg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Burj Khalifa is one of the most famous and important towers in Dubai</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/istockphoto-587532934-612x612.jpg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Saudi Arabia is one of the most advanced and important countries in the world</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/istockphoto-492730544-612x612.jpg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>The Statue of Liberty is a legacy in America that France gave to America</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/istockphoto-492730544-612x612.jpg" alt="...">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>The Statue of Liberty is a legacy in America that France gave to America</p>
-                <a href="#" class="main-button">see more</a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    
+    
+    <!-- end gallery -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 <!-- start ahmed (news) -->
 <div class="ahmed">
@@ -3656,7 +3761,7 @@
       </div>
   </aside>
 
-  <iframe src="images/v1.mp4" class="frame"></iframe>
+  <!-- <iframe src="images/v1.mp4" class="frame"></iframe> -->
  
 <!-- end news -->
     </div>
@@ -3694,7 +3799,7 @@
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="tbody">
                       <tr>
                         <td>New York</td>
                         <td>Monday</td>
@@ -3881,25 +3986,25 @@
             <div class="image-links">
               <div class="img1 imgb">
                   <a href="https://www.wunderground.com/maps/tropical/pacific-forecast" target="_blank">
-                      <img src="images/pacific.jpg" alt="">
+                      <img src="images/globe.jpg" alt="">
                       <p>Pacific Region</p>
                   </a>
               </div>
               <div class="img2 imgb">
                   <a href="https://www.meteo.gov.gh/gmet/regional-weather-northern-region/" target="_blank">
-                      <img src="images/pacific.jpg" alt="">
+                      <img src="images/land.jpg" alt="">
                       <p>North Region</p>
                   </a>
               </div>
               <div class="img3 imgb">
                   <a href="https://www.weather.gov/srh/" target="_blank">
-                      <img src="images/pacific.jpg" alt="">
+                      <img src="images/africa.jpg" alt="">
                       <p>South Region</p>
                   </a>
               </div>
               <div class="img4 imgb">
                   <a href="https://www.intrepidtravel.com/en/india/weather-in-india" target="_blank">
-                      <img src="images/pacific.jpg" alt="">
+                      <img src="images/earth.jpg" alt="">
                       <p>Indian Region</p>
                   </a>
               </div>
@@ -3984,7 +4089,7 @@
                 <button class="red" id="delete-account"><span class="material-symbols-outlined">
                     delete_forever
                     </span>Delete My Account</button>
-                <div class="pop-up" id="pop-up">
+                <div class="popup" id="popup">
                     <div class="text">
                         <h5>Are You Sure?</h5>
                         <p style="color: #333;">You Are About To Delete All Your Data</p>
