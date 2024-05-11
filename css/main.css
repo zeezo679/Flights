@@ -422,7 +422,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/istockphoto-1169630303-170667a.webp");
+    background-image: url("../images/istockphoto-1169630303-170667a.webp");
     color: white;
     letter-spacing: 2px;
 }
@@ -563,7 +563,7 @@ html
 }
 
 .weather-container{
-    background: url('/images/7280763.jpg');
+    background: url('../images/7280763.jpg');
     background-size: cover;
     position: relative;
     height: 200vh;
@@ -705,7 +705,7 @@ a{
 }
 
 .settings-container{
-    background: url('/images/sky.jpg');
+    background: url('../images/sky.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
